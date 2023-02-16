@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import closeImage from '../images/x.svg'
-import arrowImage from '../images/arrow.svg'
+import closeImage from 'shared/images/x.svg'
+import arrowImage from 'shared/images/arrow.svg'
 import { Input } from './Input';
 import { ListElement } from './ListElement';
 

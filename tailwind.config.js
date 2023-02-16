@@ -19,6 +19,9 @@ module.exports = {
         }
   
       },
+      fontFamily: {
+        montserrat: ['Monterrat', 'sans-serif']
+      },
       backgroundImage: {
         "rarity-6": "linear-gradient(120deg,#fbffca,#baffbf,#a7efff,#ffabff)"
       }

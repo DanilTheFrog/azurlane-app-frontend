@@ -1,5 +1,5 @@
 import React from 'react'
-import unknownImage from '../images/unknown.jpg'
+import unknownImage from 'shared/images/unknown.jpg'
 
 interface ListElementProps {
     title: string,

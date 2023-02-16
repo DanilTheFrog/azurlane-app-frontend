@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import API from "../api";
+import API from "../shared/api/api";
 
 interface IAuthContext {
     isAuth: boolean;

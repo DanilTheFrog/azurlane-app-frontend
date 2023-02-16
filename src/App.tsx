@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { CreateCharacterForm } from './components/admin/CreateCharacterForm';
 import { CreateItemForm } from './components/admin/CreateItemForm';
-import { Navigation } from './components/Navigation';
+import { Navigation } from './feature/Navigation';
 import { AuthContext } from './context/AuthContext';
 
 import { AboutPage } from './pages/AboutPage';
@@ -28,6 +28,11 @@ function App() {
 
   return (
     <>
+      <div className='top-0 left-0 right-0
+        h-[42px]
+        sm:text-xl
+        md:text-xl sm:h-[60px]
+        '></div>
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage/>}/>

@@ -2,8 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-    .content__container {
-        @apply w-[350px] m-auto
+@layer components {
+
+
+    .skew-background {
+        position: relative;
+        background-color: theme('colors.main.1');
+        color: white;
     }
-} */
+    
+    .skew-background::after::before {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 50px;
+        transform: rotate(7deg);
+        display: block;
+        z-index: -1;
+    }
+    
+    .skew-background::before {
+        top: -12%;
+        left: -5%;
+    }
+    
+    .skew-background::after {
+        top: 86%;
+        left: -5%;
+    }
+    
+    }

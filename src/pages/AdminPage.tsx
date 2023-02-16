@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom';
 
-import { H } from '../components/H'
+import { H } from '../shared/UI/text/H'
 
 
 

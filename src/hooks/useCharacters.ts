@@ -1,8 +1,7 @@
-import axios, { AxiosError } from "axios"
 import { useEffect, useState } from "react"
 import { ICharacter } from "../models"
 import {serverURL} from '../config'
-import API from "../api"
+import API from "../shared/api/api"
 
 
 
@@ -15,19 +14,19 @@ export const useCharacters = () => {
     async function fetchCharacters() {
         try {
             setStatus('loading')
-            const response = await axios.get<ICharacter[]>(serverURL+"characters/", {
-                headers: {
-                    'Authorization': API.getAuth()
-                }
-            })
+            // const response = await axios.get<ICharacter[]>(serverURL+"characters/", {
+            //     headers: {
+            //         'Authorization': API.getAuth()
+            //     }
+            // })
             
-            setCharacters(response.data);
+            setCharacters([]);
             setStatus('loaded')
         } catch (e: unknown) {
-            const error = e as AxiosError;
+            const error = e
             
             setStatus('error')
-            setError(error.message)
+            setError('error')
         }
     }
 

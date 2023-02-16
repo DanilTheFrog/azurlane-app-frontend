@@ -1,0 +1,19 @@
+:root {
+    --height-of-decorative-triangles: 200px
+}
+
+
+.decorative_triangle-top, .decorative_triangle-bottom {
+    position: absolute;
+    width: 100%;
+    height: var(--height-of-decorative-triangles);
+}
+
+.decorative_triangle-top {
+    top: calc(0px - var(--height-of-decorative-triangles));
+}
+
+.decorative_triangle-bottom {
+    bottom: calc(0px - var(--height-of-decorative-triangles));
+    transform: scale(-1, -1);
+}

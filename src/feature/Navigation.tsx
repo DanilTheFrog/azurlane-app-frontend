@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from 'hooks/useAuth';
 
-import logo from '../images/logo.png';
+import logo from 'shared/images/logo.png';
 
 
 
@@ -20,7 +20,8 @@ export function Navigation() {
         h-[42px] text-xs
         sm:text-xl
         md:text-xl sm:h-[60px]
- 
+        fixed mb-5
+        z-10
         '
         
         >

@@ -1,9 +1,9 @@
-import axios, { AxiosError } from 'axios'
+
 import { useEffect, useState } from 'react'
 import { Cards } from '../components/Cards'
 import { CustomError } from '../components/CustomError'
-import { H } from '../components/H'
-import { Loading } from '../components/Loading'
+import { H } from '../shared/UI/text/H'
+import { Loading } from '../shared/UI/Loading'
 import { Modal } from '../components/Modal'
 import { ShowItem } from '../components/ShowItem'
 import { Sort } from '../components/Sort'
@@ -38,26 +38,26 @@ export function ItemsPage() {
     //     })
     // }
 
-    async function fetchItems() {
-        try {
-            const response = await axios.get<IItem[]>(serverURL+ "items");
-            if(response.data) {
-                console.log(response.data);
-                setItems(response.data);
-                setStatus('loaded');
-            }
-            //onSort('rarity')
-        } catch(error) {
-            const e = error as AxiosError;
-            console.log(e);
-            setError(e.message);
-            setStatus('error');
-        }
-    }
+    // async function fetchItems() {
+    //     try {
+    //         const response = await axios.get<IItem[]>(serverURL+ "items");
+    //         if(response.data) {
+    //             console.log(response.data);
+    //             setItems(response.data);
+    //             setStatus('loaded');
+    //         }
+    //         //onSort('rarity')
+    //     } catch(error) {
+    //         const e = error as AxiosError;
+    //         console.log(e);
+    //         setError(e.message);
+    //         setStatus('error');
+    //     }
+    // }
 
 
     useEffect(()=>{
-        fetchItems();
+        //fetchItems();
         // onSort("rarity");
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
